@@ -1,4 +1,5 @@
 🧠 NeuroTrade
+
 NeuroTrade is a full-stack web application that simulates a stock trading platform. Users can register, log in securely, get real-time stock quotes, buy and sell shares, monitor their portfolio, and track transaction history.
 
 🚀 Features
