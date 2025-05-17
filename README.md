@@ -1,27 +1,71 @@
-🧠 NeuroTrade
+# NeuroTrade
+#### Video Demo:  <https://youtu.be/MCJp6WTDjXo?feature=shared>
+#### Description: An AI-powered stock trading simulation platform built as part of the CS50x: Introduction to Computer Science course. NeuroTrade mimics a real-time trading experience with features like stock quoting, portfolio tracking, and transaction history.
 
-NeuroTrade is a full-stack web application that simulates a stock trading platform. Users can register, log in securely, get real-time stock quotes, buy and sell shares, monitor their portfolio, and track transaction history.
+---
 
-🚀 Features
-🧾 User Authentication — Register and log in securely with password hashing.
+## 🚀 Features
 
-📈 Real-Time Stock Quotes — Get up-to-date stock prices using the IEX Cloud API.
+- 🔐 User authentication (register/login/logout)
+- 📈 Real-time stock lookup using IEX API
+- 🛒 Buy & sell shares with live pricing
+- 💼 View portfolio with current holdings and available cash
+- 🕒 View transaction history
+- ⚙️ Built with Python, Flask, SQLite, and Jinja2 templates
 
-💰 Buy & Sell Shares — Trade stocks with a virtual budget.
+---
 
-📊 Portfolio Management — View current holdings with live prices and total value.
+## 💻 Tech Stack
 
-🕓 Transaction History — Track all past buys and sells with timestamps.
+- **Frontend**: HTML, CSS, Jinja2 (Flask templates)
+- **Backend**: Python, Flask
+- **Database**: SQLite
+- **APIs**: [IEX Cloud](https://iexcloud.io) for real-time stock prices
 
-➕ Add Cash (Optional Feature) — Refill your virtual account balance.
+---
 
-🛠️ Built With
-Python (Flask)
+## 🏗️ Project Structure
 
-HTML / CSS (Bootstrap for styling)
+NeuroTrade/
+│
+├── app.py # Flask app and routing
+├── helpers.py # Custom helper functions (e.g., API lookups)
+├── finance.db # SQLite database
+├── templates/ # HTML templates
+│ ├── layout.html
+│ ├── login.html
+│ ├── register.html
+│ ├── quote.html
+│ ├── buy.html
+│ ├── sell.html
+│ └── index.html
+├── static/ # Optional CSS or image files
+└── README.md
 
-SQLite (Relational database)
 
-Jinja2 (Template engine for dynamic HTML rendering)
+---
 
-IEX Cloud API (Stock price data)
+## 🔐 Authentication & Sessions
+
+- Uses Flask-Session to manage user sessions
+- Passwords hashed securely with Werkzeug
+
+---
+
+## 📚 What I Learned
+
+- How to build full-stack web apps with Flask and SQLite
+- API integration (stock data from IEX)
+- Session management and security in web apps
+- Dynamic rendering using Jinja2 and Bootstrap
+
+---
+
+## 📦 Installation (Optional)
+
+To run this locally:
+```bash
+git clone https://github.com/yourusername/NeuroTrade.git
+cd NeuroTrade
+pip install -r requirements.txt
+flask run
